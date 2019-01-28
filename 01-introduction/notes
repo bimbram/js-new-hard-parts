@@ -1,0 +1,53 @@
+002 - JavaScript Code Execution
+-Execution context is a space to do something
+-JS thread is singular
+
+-JavaScript the Hard Parts
+1. Foundations of JavaScript
+2. Asynchronous JavaScript (callbacks, promises)
+3. Iterators
+4. Generators & Async/await
+
+-What happens when JS executes (runs) my code?
+const num = 3;
+function multiplyBy2 (inputNumber) {
+  const result = inputNumber*2;
+  return result;
+}
+const name = 'Will'
+
+As soon as we start running our code, we create a global execution context
+1. Thread of execution (parsing and executing the code line after line)
+2. Live memory of variables with data (known as Global Variable Environment)
+
+-Running/calling/involing a function
+This is not the same as defining a function
+
+const num = 3
+function multiplyBy2 (inputNumber) {
+  const result = inputNumber * 2;
+  return result;
+}
+
+const output = multiplyBy2(4);
+const newOutput = multiplyBy2(10);
+
+When you execute a function you create a new execution context comprising:
+1. The thread of execution (we go through the code in the function line by line)
+2. A local memory (Variable environment) where anything defined in the function is stored
+
+
+001 - Introduction
+-Engineer: the ability to build
+
+-The 5 capacities companies look for in candidates
+1. Analytical problem solving with code
+2. Technical communication (can I implement your approach just from your explanation)
+3. Engineering best practices and approach (debugging, code structure, patience, and reference to documentation)
+4. Non-technical communication (empathetic and thoughtful communication)
+5. Language and computer science experience
+
+-Our expectations
+1. Support each other - engineering
+2. Work hard, work smart
+3. Thoughtful communication
