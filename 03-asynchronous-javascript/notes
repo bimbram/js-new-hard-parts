@@ -1,0 +1,30 @@
+006 - Wrapping Up Promises
+-Promise based model problem and benefits
+Problem:
+1. 99% of developers have no idea how they're working under the hood
+2. Debugging becomes super-hard
+
+Benefits:
+1. Cleaner readable style with pseudo synchronous style code
+2. Nice error handling process
+
+005 - Microtask Queue Q&A
+-The microtask que is not leaving until it's empty
+
+004 - Promises & Microtask Queue
+-We need to know how our promise-deferred functionality gets back into JavaScript to be run (see deferred.js)
+-JS has another que outside callback que which called the microtask/job que
+
+003 - Promises Q&A
+
+002 - Promises
+-Solution 3 - Using two-pronged 'facade' functions that both initiated background web browser work and return a placeholder object (promise) immediately in JavaScript
+-fetch is a function that masking certain js work
+
+001 - Introducing Promises
+-Introducing the readability enhancer - Promises
+1. Special objects built into JavaScript that get returned immediately when we make a call to a web browser API/feature that's set up to return promises (not all are)
+2. Promises act as a placeholder for the data we hope to get back from the web browser feature's background work
+3. We also attach the functionality we want to defer running until that background work is done (using the built in .then method)
+4. Promise objects will automatically trigger that functionality to run
+5. The value returned from the web browser feature's work (e.g. the returned data from the server using fetch) will be that function's input/argument
