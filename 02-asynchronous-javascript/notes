@@ -1,0 +1,59 @@
+007 - Asynchronous Exercises
+-To get the balance right between researching and stackoverflow is pair programming
+-csbin.io/promises
+
+006 - Wrapping Up Web Browser APIs
+-Problems and Benefit of the web browser API's solution to our dilemma
+Problems:
+1. No problems!
+2. Our response data is only available in the callback function - Callback Hell
+3. Maybe it feels a little odd to think of passing a function into another function only for it to run much later
+
+Benefits:
+1. Super explicit once you understand how it works under-the-hood
+
+
+005 - Calling the Outside World Q&A
+-Callback Queue is a JS engine feature
+-Queue structure = first in first out
+-Anonymous function is also being stored in memory
+
+
+004 - Calling the Outside World
+-Explaining the code line by line (block.js)
+-We need a fundamental rule when defered functionality will be called
+1. Only global in our call stack
+2. End all of the synchronous code
+
+-Callback/Task Queue
+-Event loop: the process of checking the call stack and the synchronous code
+
+003 - Asynchronous Web Browser APIs Q&A
+-setTimeout is a facade function, it is not a function
+
+-we're interacting with a world outside of JavaScript now - so we need rules
+
+
+002 - Asynchronous Web Browser APIs
+-Solution 2 - Introducing Web Browsers APIs / Node background threads
+-Any feature that is not in my own runtime / engine is something i interface it, and hence API (for interface)
+
+001 - Introducing Asynchronicity
+-Asynchronicity is the backbone of modern web development in JavaScript
+
+JavaScript is a single threaded (one command executing at a time) and has a synchronous execution model (each line is executed in order the code appears)
+
+So what if we need to wait some time before we can execute certain bits of code? Perhaps we need to wait on fresh data from an API/server request or for a timer to complete and then execute our code
+
+We have a conundrum - a tension between wanting to delay some code execution but not wanting to block the thread from any further code running while we wait.
+
+-Goals
+1. Be able to do tasks that take a long time to complete e.g. getting data from the server
+2. Continue running our JavaScript code line by line without one long task blocking further JavaScript executing
+3. When our slow task completes, we should be able to run functionality knowing that task is done and data is ready
+
+-See solution1.js for a solution for the conundrum
+
+-Problem and benefits with solution 1
+Problem: fundamentally untenable - blocks our single javascript thread from running any further code while task completes
+Benefits: it's easy to reason about
