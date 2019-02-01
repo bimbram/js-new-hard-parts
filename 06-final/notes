@@ -1,0 +1,18 @@
+002 - Wrapping Up
+-To get a mid-level or senior JS code, you need to have an under the hood understanding
+
+
+001 - Async Await
+-Async/await simplifies all this and finally fixes the inversion of control problem of callback
+
+async function createFlow() {
+  console.log('me first')
+  const data = await fetch('http//twitter.com/will/tweets/1')
+  console.log(data)
+}
+
+createFlow();
+
+console.log('Me second')
+
+No need for a triggered function on the promise resolution, instead we auto trigger the resumption of the create flow execution (this functionality is still added to the microtask queue though)
